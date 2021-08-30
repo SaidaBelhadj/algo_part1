@@ -1,0 +1,36 @@
+ALGORITHM find_smu_distinct_elts
+VAR
+    c : CHAR := '';
+    set1 :ARRAY OF INTEGER;
+    set2 :ARRAY OF INTEGER;
+    i :INTEGER :=0;
+    j :INTEGER :=0;
+    sum INTEGER :=0;
+
+ 
+BEGIN
+ 
+        Read(set1);
+        Read(set2);
+
+    WHILE (i < set1.length) DO
+        nb_char := nb_char +1;
+        IF (set1[i] <> set2[j]) THEN
+           i:= i+1;
+            j:= j+1;
+        ELSE sum := sum + set1[i];
+        END_IF
+        
+
+        IF (c=' ') THEN
+            nb_word := nb_word +1;
+        END_IF
+    i:=i+1;
+    END_WHILE
+
+    Write("The length of the sentence is ",nb_char);
+     nb_word := nb_word +1;
+    Write("The number of words in the sentence is ",nb_word); 
+    // on a incrementer le nombre de mots à 1 car il risque de ne pas lire le dernier mot.
+    Write("he number of vowels in the sentence. is ",nb_vow);
+END
